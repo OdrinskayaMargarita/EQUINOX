@@ -1,0 +1,60 @@
+.js-modal-btn {
+  & > *,
+  * {
+    pointer-events: none;
+  }
+}
+
+.whitespace {
+  display: inline;
+  width: .5em;
+}
+
+.word {
+  transition: 500ms;
+  display: inline;
+}
+
+.button {
+  &--blue{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 17px;
+    background-color: $c-blue;
+    border-radius: 19px;
+    color: $c-white;
+    font-family: $font-helvetica;
+    font-weight: 500;
+    font-size: 14px;
+    position: relative;
+    &:before{
+      width: 100%;
+      content: '';
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      height: 100%;
+      background-color: #8d839b;
+      transition: opacity 500ms ease-out;
+      border-radius: 19px;
+      opacity: 0;
+    }
+    .icon{
+      fill: white;
+      stroke: none;
+      width: 5px;
+      margin-right: 10px;
+    }
+
+    &:hover{
+      &:before{
+        opacity: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,107 @@
+.types-slider {
+  background-color: #f9f9fa;
+  padding: 65px 208px 65px 208px;
+
+  @include laptop-mini {
+    padding: 0 75px;
+  }
+
+  @include tablet {
+    padding: 0 50px;
+  }
+  @include mobile {
+    padding: 35px;
+  }
+
+  .custom {
+    &-wrapper-type{
+      display: flex;
+      align-items: stretch;
+      position: relative;
+
+      .custom-pagination {
+        bottom: -70px;
+        top: auto;
+        max-width: 90%;
+        width: 100%;
+        right: 0;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        height: 1px;
+        background-color: rgba(#8d839b, 0.3);
+
+        @include tablet-plus {
+          bottom: -35px;
+        }
+
+        &__progressbar {
+          height: 5px;
+          top: -2px;
+          // width: 10%;
+          width: 100%;
+          position: absolute;
+          transform: scaleX(0.02);
+          transform-origin: 0 0;
+          transition: transform .05s;
+          left: 0;
+          background-image: linear-gradient(180deg, #bdbaee 0%, #dccde5 100%);
+          border-radius: 36px;
+        }
+      }
+    }
+
+    &-slide-type {
+      box-shadow: 0 0 64px -30px rgba(64, 95, 158, 0.47);
+      border-radius: 20px;
+      background-color: #ffffff;
+      padding: 190px 15px 35px 35px;
+      max-width: 420px;
+      min-width: 420px;
+      width: 100%;
+      min-height: 420px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      margin-right: 20px;
+      overflow: hidden;
+
+      &__img{
+        width: 80px;
+        margin-bottom: 10px;
+      }
+
+      @include mobile {
+        max-width: 350px;
+        min-width: 350px;
+      }
+
+      &--left {
+        img {
+          left: 0;
+          right: auto
+        }
+      }
+
+      &__background {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: auto;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 30px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

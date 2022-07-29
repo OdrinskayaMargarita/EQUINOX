@@ -1,0 +1,21 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 208px;
+  position: relative;
+
+  @include laptop-mini {
+    padding: 0 75px;
+  }
+
+  @include tablet {
+    padding: 0 50px;
+  }
+  @include mobile {
+    padding: 0 35px;
+  }
+
+  @include up-desktop-large{
+    padding: 0 300px;
+  }
+}

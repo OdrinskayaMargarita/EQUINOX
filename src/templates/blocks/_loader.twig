@@ -1,0 +1,62 @@
+<style>
+  body, html {
+    overflow-y: hidden;
+  }
+
+  main, header {
+    opacity: 0;
+    transition: 500ms ease-in-out;
+  }
+
+  .loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transition: opacity 1s ease-out;
+    /*display: none;*/
+    /*opacity: 0;*/
+  }
+
+  .loader-block {
+    /*display: block;*/
+    opacity: 1;
+  }
+
+  .loader .plyr__controls {
+    display: none;
+  }
+
+  .loader.is-disabled {
+    pointer-events: none;
+  }
+
+  .loader__wrapper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .loader-wrapper .plyr__video {
+    width: 100%;
+    height: 100%;
+    transition: 500ms;
+  }
+
+  .loader-wrapper .plyr__poster {
+    opacity: 0;
+  }
+</style>
+
+<div class="loader js-loader" id="loader">
+    <div class="loader__wrapper">
+        <div class="plyr__video-embed js-player" data-plyr-provider="vimeo"
+             data-plyr-embed-id="https://vimeo.com/578455099"></div>
+{#        <video class="plyr__video" playsinline loop muted autoplay style="width: 100%; height: 100%; object-fit: cover">#}
+{#            <source src="video/homepage/hero.mp4" type="video/mp4"/>#}
+{#            <source src="video/homepage/hero.webm" type="video/webm"/>#}
+{#        </video>#}
+    </div>
+</div>

@@ -1,0 +1,14 @@
+.traveller{
+  background-color: $c-white;
+  padding: 200px 0;
+
+  @include tablet-plus{
+    padding-top: 100px;
+    padding-bottom: 400px;
+  }
+
+  @include mobile{
+    padding-top: 75px;
+    padding-bottom: 300px;
+  }
+}

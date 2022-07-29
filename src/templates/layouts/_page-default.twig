@@ -1,0 +1,52 @@
+{% import "mixins/_buttons.twig" as button %}
+{% import "mixins/_titles.twig" as titles %}
+{% import "mixins/_adaptive-images.twig" as images %}
+{% import "mixins/_icons.twig" as icons %}
+
+<!doctype html>
+<html lang="en">
+
+{% block otherStyles %}{% endblock %}
+{% include "./_head.twig" %}
+
+<script>
+
+    window.onload = () => {
+        let loader = document.getElementById('loader')
+        let body = document.getElementById('body');
+        let html = document.querySelector('html');
+
+        let func = () => {
+            body.classList.add('is-loaded');
+            html.classList.add('is-loaded');
+        }
+
+        // if (!localStorage.getItem('load')) {
+        //     localStorage.setItem('load', 'true');
+        //     loader.classList.add('loader-block');
+        // } else {
+        //     func()
+        // }
+
+        setTimeout(() => {
+            func()
+        }, 4000);
+    }
+</script>
+
+
+<body data-page-name="{{ pageName }}" id="body" class="body">
+
+
+{% include "blocks/_header.twig" %}
+
+{% block content %}{% endblock %}
+{% include "blocks/_footer.twig" %}
+
+
+
+{% block otherScripts %}{% endblock %}
+<script src="/js/app.js"></script>
+
+</body>
+</html>

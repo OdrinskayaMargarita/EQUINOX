@@ -1,0 +1,87 @@
+html, body {
+  width: 100%;
+  height: auto;
+  font-family: $font-helvetica;
+  color: $c-black;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  &.is-loaded{
+    overflow-y: auto;
+    opacity: 1;
+    .loader{
+      opacity: 0;
+      z-index: -1;
+    }
+    main, header{
+      opacity: 1;
+    }
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  color: $c-txt-dark;
+  font-weight: 400;
+  background-color: $c-white;
+  overflow-y: hidden;
+
+  main {
+    flex-grow: 1;
+    padding-top: 40px;
+  }
+
+  .footer {
+    flex-grow: 0;
+  }
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  background-color: $c-white;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background: linear-gradient(180deg, $c-blue 0%, rgba(255, 127, 66, 0) 100%);
+}
+
+* {
+  scrollbar-color: $c-blue transparent;
+  scrollbar-width: thin;
+}
+
+a{
+  cursor: pointer;
+  display: inline-block;
+}
+
+p, li{
+  font-size: 16px;
+  line-height: 24px;
+  font-family: $font-helvetica;
+}

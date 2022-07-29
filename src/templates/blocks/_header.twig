@@ -1,0 +1,46 @@
+<header class="header js-header" id="header">
+    <div class="container">
+        <div class="header__inner">
+            <div class="header__inner-left">
+                <a href="/" class="header__logo">
+                    <img src="./img/logo.svg">
+                </a>
+            </div>
+            <div class="header__inner-right">
+                <nav class="header__nav" id="header-nav">
+                    <span class="header__nav--background">
+                        <img src="./img/holographic.jpg">
+                    </span>
+                    <div class="header__nav-head">
+                        <a href="javascript: void(0)" class="header__nav--logo">
+                            {{ icons.icon('logo-white') }}
+                        </a><a href="javascript: void(0)" class="header__nav--close" id="header-nav--close">
+                            {{ icons.icon('close') }}
+                        </a>
+                    </div>
+                    <ul class="header__nav-list">
+                        <li>
+                            <a href="#discover" data-href="discover">L'immeuble</a>
+                        </li>
+                        <li>
+                            <a href="#syenergy" data-href="syenergy">Les services</a>
+                        </li>
+                        <li>
+                            <a href="#localisation" data-href="localisation">La localisation</a>
+                        </li>
+                        <li>
+                            <a href="#contact" data-href="contact">Contact</a>
+                        </li>
+                        <a href="#brochure" data-href="brochure" class="button--blue">
+                            {{ icons.icon('arrow-right') }}
+                            Télécharger la brochure
+                        </a>
+                    </ul>
+                </nav>
+                <a href="javascript:void(0)" class="header__nav-burger" id="header-burger">
+                    {{ icons.icon('burger') }}
+                </a>
+            </div>
+        </div>
+    </div>
+</header>

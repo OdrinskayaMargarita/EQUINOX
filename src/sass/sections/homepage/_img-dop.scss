@@ -1,0 +1,66 @@
+.img-dop {
+  background-color: $c-white;
+  padding-top: 0;
+  margin-bottom: -7%;
+  margin-top: -250px;
+
+  @include laptop{
+    margin-bottom: -15%;
+  }
+
+  @include tablet-plus{
+    margin-bottom: -20%;
+  }
+
+  @include mobile{
+    margin-bottom: -30%;
+  }
+
+  .info-block {
+    &__left {
+      grid-column: 2;
+      grid-row: 1;
+      position: relative;
+      z-index: 2;
+
+      .hero {
+        &__right-inner {
+          padding-bottom: 100%;
+        }
+
+        &__video {
+          width: 110%;
+          max-width: initial;
+          left: -5%;
+
+          &-background {
+            width: 112%;
+            left: -2%;
+            bottom: -7%;
+          }
+        }
+      }
+    }
+
+    &__right {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    @include up-desktop-large {
+      justify-content: space-around;
+    }
+
+    @include mobile {
+      &__left {
+        grid-row: 2;
+        grid-column: 1;
+      }
+
+      &__right {
+        grid-row: 1;
+        grid-column: 1;
+      }
+    }
+  }
+}

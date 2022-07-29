@@ -1,0 +1,150 @@
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  color: $c-txt-dark;
+  font-weight: 500;
+  font-family: $font;
+
+  &.reverse{
+    .word {
+      &:first-child {
+        width: 100%;
+        margin-left: 35px;
+        color: $c-txt-dark;
+        font-weight: 500;
+      }
+      &:last-child {
+        width: auto;
+        margin-left: -0.3em;
+        color: $c-txt-light;
+        font-weight: 300;
+      }
+    }
+  }
+
+  .word {
+    &:last-child {
+      width: 100%;
+      margin-left: 35px;
+      color: $c-txt-light;
+      font-weight: 300;
+    }
+  }
+}
+
+.whitespace {
+  width: 0.3em;
+}
+
+.title--xs, h5 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  color: $c-txt-dark;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+
+  @include up-desktop-large{
+    font-size: 24px;
+  }
+}
+
+.title--s, h4 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  color: $c-txt-dark;
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 30px;
+  @include up-desktop-large {
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+.title--m, h3 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  color: $c-txt-dark;
+  font-size: 35px;
+  line-height: 40px;
+  font-weight: 300;
+  color: $c-txt-dark;
+
+  @include tablet-plus {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  @include up-desktop-large {
+    font-size: 42px;
+    line-height: 44px;
+  }
+}
+
+
+.title--l, h2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  color: $c-txt-dark;
+  font-size: 50px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: 50px;
+
+  @include tablet-plus {
+    font-size: 40px;
+    line-height: 45px;
+    letter-spacing: 1.6px;
+  }
+
+  @include up-desktop-large {
+    font-size: 60px;
+    line-height: 65px;
+  }
+}
+
+.title--xl, h1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  color: $c-txt-dark;
+  font-size: 70px;
+  font-weight: 300;
+  letter-spacing: 3px;
+  line-height: 75px;
+  color: $c-txt-light;
+
+  @include tablet-plus {
+    font-size: 50px;
+    font-weight: 300;
+    letter-spacing: 0.71px;
+    line-height: 60px;
+  }
+
+  @include up-desktop-large {
+    font-size: 80px;
+    line-height: 80px;
+  }
+}
+
+p{
+  font-size: 16px;
+  line-height: 24px;
+
+  @include up-desktop-large{
+    font-size: 20px;
+    line-height: 28px;
+  }
+}

@@ -1,0 +1,42 @@
+---
+title: Home
+description: Template
+pageName: homePage
+---
+
+{% extends 'layouts/_page-default.twig' %}
+
+{% block otherStyles %}
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css"/>
+{% endblock %}
+
+{% block content %}
+    {% include "blocks/_loader.twig" %}
+
+    <main>
+        {% include "pages/home/_hero-modal.twig" %}
+        {% include "pages/home/_hero.twig" %}
+
+        <section class="first-background" data-scroll-section id="discover"></section>
+        {% include "pages/home/_discover.twig" %}
+        {% include "pages/home/_syenergy.twig" %}
+        {% include "pages/home/_types-slider.twig" %}
+        {% include "pages/home/_image-slider.twig" %}
+        <div class="second-background" data-scroll-section></div>
+
+        {% include "pages/home/_traveller.twig" %}
+
+        {% include "pages/home/_img-dop.twig" %}
+
+        {% include "pages/home/_img-block.twig" %}
+
+        {% include "pages/home/_localization.twig" %}
+
+
+        <section class="brochure-footer" data-scroll-section>
+            {% include "pages/home/_img-block2.twig" %}
+        </section>
+        {% include "pages/home/_brochure.twig" %}
+
+    </main>
+{% endblock %}

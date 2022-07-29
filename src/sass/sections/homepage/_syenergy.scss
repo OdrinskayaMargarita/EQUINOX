@@ -1,0 +1,49 @@
+.syenergy {
+  @include tablet-plus{
+    padding-bottom: 200px;
+  }
+  @include mobile{
+    padding-bottom: 20px;
+  }
+  .hero {
+    &__video {
+      max-width: 130%;
+      left: -10%;
+      width: 110%;
+      min-height: 100%;
+      height: auto;
+      top: -15%;
+    }
+    &__right-inner{
+      @include mobile{
+        padding-bottom: 85%;
+      }
+    }
+  }
+
+  .info-block {
+
+    &__left {
+      grid-column: 2;
+      grid-row: 1;
+      @include mobile {
+        grid-row: 2;
+        grid-column: 1;
+        padding: 50px 0 0px 30px;
+      }
+
+      &__right {
+        grid-column: 1;
+        grid-row: 1;
+        @include mobile {
+          grid-row: 1;
+          grid-column: 1;
+        }
+      }
+
+      @include up-desktop-large {
+        justify-content: space-around;
+      }
+    }
+  }
+}

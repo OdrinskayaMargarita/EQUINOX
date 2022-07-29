@@ -1,0 +1,35 @@
+.p404{
+  padding: 135px 0;
+
+  &__inner{
+    max-width: 65%;
+    width: 100%;
+
+    @include tablet{
+      max-width: 100%;
+    }
+  }
+
+  .title{
+    font-weight: 300;
+    &--xl{
+      margin-bottom: 10px;
+    }
+    &--m{
+      margin-bottom: 25px;
+    }
+  }
+
+  p {
+    margin-bottom: 50px;
+  }
+
+  .button--blue{
+    padding: 9px 18px;
+  }
+
+}
+
+body[data-page-name=page404] .footer__inner{
+  display: none;
+}

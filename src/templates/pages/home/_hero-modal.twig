@@ -1,0 +1,22 @@
+<div id="hero__modal" class="modal-video js-modal">
+    <div class="modal-video__overlay js-hovered js-close"></div>
+    <div class="modal-video__content js-media">
+        <button class="modal-video__close btn-close js-close"
+                type="button" role="button" aria-label="close">
+            {{ icons.icon('close') }}
+        </button>
+        <div class="modal-video__video media-wrap js-modal-media">
+            {# IF video is embed from vimeo - src must be here by default #}
+                 <div class="plyr__video-embed js-player js-modal-player" data-plyr-provider="vimeo"
+                 data-plyr-embed-id="https://vimeo.com/578455099"></div>
+            {# ENDIF video is embed from vimeo #}
+
+            {# IF video is embed as file - we don't need src, it'll be added from script #}
+{#            <video class="plyr__video js-player js-modal-player" playsinline controls>#}
+{#                <source src="./video/homepage/hero.mp4" type="video/mp4"/>#}
+{#                <source src="./video/homepage/hero.webm" type="video/webm"/>#}
+{#            </video>#}
+            {# ENDIF video is embed as file #}
+        </div>
+    </div>
+</div>
